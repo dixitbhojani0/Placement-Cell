@@ -1,0 +1,38 @@
+
+<div class="w-50 border border-dark mx-auto mt-5">
+  <div class="mx-auto mt-3 mb-3" style="width: 200px">
+    <h1>SIGNIN</h1>
+  </div>
+
+  <form class="w-50 mx-auto" action="/createSession" method="POST">
+    <div class="mb-3">
+      <label for="input-email" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="input-email"
+        placeholder="name@example.com"
+        name="email"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="input-password" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="input-password"
+        name="password"
+      />
+    </div>
+
+    <div style="display: flex; justify-content: center">
+      <button type="submit" class="btn btn-primary">LOGIN</button>
+    </div>
+  </form>
+
+  <div class="mx-auto mb-3 mt-3" style="width: 300px">
+    <h5 style="display: inline">Don't Have An Account&nbsp;</h5>
+    <a href="/signUp">SIGN_UP</a>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<% if (locals.user) {%>
+    <div class="container mt-4 col-md-4">
+        <h4 class="text-center">Add student</h4>
+
+        <form class="row g-3 mt-1 border border-dark rounded p-2" style="--bs-border-opacity: 0.5"
+            action="/student/createStudent" method="POST">
+
+            <div class="col-12">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" placeholder="Enter student name" id="name" name="name"
+                    required />
+            </div>
+
+            <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" placeholder="Enter student email" id="email"
+                    name="email" required />
+            </div>
+
+            <div class="col-12">
+                <label for="college" class="form-label">college</label>
+                <input type="text" class="form-control" placeholder="Enter student college" id="college"
+                    name="college" required />
+            </div>
+
+            <div class="col-12">
+                <label for="batch" class="form-label">Phone no.</label>
+                <input type="text" class="form-control" id="phone" placeholder="Enter phone no." name="phone"
+                    required />
+            </div>
+
+            <div class="col-md-6">
+                <label for="placementStatus" class="form-label">Placement status</label>
+                <select id="placementStatus" class="form-select" required name="placementStatus">
+                    <option selected>Not Placed</option>
+                    <option>Placed</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label for="batch" class="form-label">Batch</label>
+                <input type="text" class="form-control" id="batch" placeholder="Enter batch no." name="batch"
+                    required />
+            </div>
+
+            <div class="col-md-4">
+                <label for="dsaScore" class="form-label">DSA score</label>
+                <input type="number" class="form-control" id="dsaScore" name="dsaScore" required />
+            </div>
+
+
+            <div class="col-md-4">
+                <label for="webdevScore" class="form-label">WebDev score</label>
+                <input type="number" class="form-control" id="webdevScore" name="webdevScore" required />
+            </div>
+
+
+            <div class="col-md-4">
+                <label for="reactScore" class="form-label">React score</label>
+                <input type="number" class="form-control" id="reactScore" name="reactScore" required />
+            </div>
+
+            <div class="col-12 ">
+                <button type="submit" class="btn btn-primary">Add Student</button>
+            </div>
+
+        </form>
+    </div>
+    </div>
+
+<%} %>

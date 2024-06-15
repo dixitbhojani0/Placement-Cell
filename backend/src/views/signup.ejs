@@ -1,0 +1,19 @@
+<div class="w-50 border border-dark mx-auto mt-5">
+  <div class="mx-auto mt-3 mb-4" style="width: 200px">
+    <h1>SIGNUP</h1>
+  </div>
+
+  <form class="w-50 mx-auto" action="/create" method="POST">
+    <!-- PARTIAL FOR EMPLOYEES -->
+    <%- include('createEmployee') %>
+
+    <div class="mb-4 mt-3" style="display: flex; justify-content: center">
+      <button type="submit" class="btn btn-primary">SIGNUP</button>
+    </div>
+
+    <div class="mx-auto mb-3 mt-3" style="width: 300px">
+      <h5 style="display: inline">Already Have An Account&nbsp;</h5>
+      <a href="/">SIGN_IN</a>
+    </div>
+  </form>
+</div>
