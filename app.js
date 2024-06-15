@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import cookieParser from "cookie-parser";
 import express from "express";
 import expressEjsLayouts from "express-ejs-layouts";
@@ -26,14 +28,14 @@ app.set("views", path.resolve("backend", "src", "views"));
 app.use(
     session({
         name: "placement-cell",
-        secret: "asewe",
+        secret: process.env.JWT_Secret,
         saveUninitialized: false,
         resave: false,
         cookie: {
             maxAge: 1000 * 60 * 100,
         },
         store: MongoStore.create({
-            mongoUrl: "mongodb://127.0.0.1:27017/PlacementCell",
+            mongoUrl: process.env.mongoURI,
             autoRemove: "disabled",
         }),
         function(err) {

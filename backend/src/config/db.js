@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 export const connectToDB = async () => {
     try {
         console.log("db connecting...");
-        const res = await mongoose.connect(process.env.mongoURI || 'mongodb://127.0.0.1:27017/PlacementCell');
+        const res = await mongoose.connect(process.env.mongoURI);
         console.log(`mongodb connected with server ${res.connection.host}`);
     } catch (err) {
         console.log("mongodb connection failed!");
