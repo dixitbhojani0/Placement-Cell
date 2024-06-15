@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 try {
     server.listen(port, async () => {
         await connectToDB();
-        console.log(`server is running at http://localhost:${port}`);
+        console.log(`server is running at ${port}`);
     })
 } catch (err) {
     console.log(`server failed with error ${err}`);
