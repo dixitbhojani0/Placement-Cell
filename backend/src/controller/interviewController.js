@@ -45,7 +45,6 @@ export const enrollInInterview = async (req, res) => {
             return res.redirect("/");
         }
 
-        console.log(student);
         // check if already enrolled
         const alreadyEnrolled = await interviewModel.findOne({ "students.student": student._id });
 
@@ -70,10 +69,10 @@ export const enrollInInterview = async (req, res) => {
             }
         });
 
-        req.flash(
-            "success",
-            `${student.name} enrolled in ${interview.company} interview!`
-        );
+        // req.flash(
+        //     "success",
+        //     `${student.name} enrolled in ${interview.company} interview!`
+        // );
     } catch (err) {
         console.log(err);
         console.log("error", "Error in enrolling interview!");

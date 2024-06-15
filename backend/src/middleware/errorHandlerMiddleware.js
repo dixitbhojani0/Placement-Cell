@@ -8,10 +8,10 @@ export class customErrorHandler extends Error {
   export const errorHandlerMiddleware = (err, req, res, next) => {
     // Write your code here
     if(err instanceof customErrorHandler) {
-      res.status(err.statusCode).send(err.message);
+      return res.status(err.statusCode).send(err.message);
     } else {
       console.log(err);
-      res.status(500).send("Oops! Something went wrong... Please try again later!");
+      return res.status(500).send("Oops! Something went wrong... Please try again later!");
     }
   };
   
